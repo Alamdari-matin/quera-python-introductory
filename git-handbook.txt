@@ -1,0 +1,5 @@
+1. make or change --> unt...chet
+2. git add 'file name' --> new
+3. git commit -m 'comment' 
+
+git diff . . . --> see chandges
