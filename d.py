@@ -1,15 +1,20 @@
-n = int(input())
+def reverse (a):
+    a = int(a)
+    b = 0
+    while (a != 0) :
+        b *= 10
+        b += (a % 10)
+        a = a // 10
+    return b
 
-l = list(map(int, input().split()))
+p = 1
+list = []
+while p == 1 :
+    char = input()
+    if char != 'End':
+        list.append(int(char))
+    elif char == 'End':
+        p = 0
 
-ll = [0] * 101
-
-for i in range(len(l)):
-    ll[l[i]] += 1
-
-for i in range(len(ll)):
-    if ll[i] == 0 :
-        ll[i] = 101
-
-print(ll)
-print(ll.index(min(ll)+1))
+for i in range(len(list) - 1, -1, -1):
+    print(reverse(list[i]))
